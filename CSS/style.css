@@ -57,22 +57,32 @@ video:background {
 .top-container {
   position: relative;
   padding-top: 100px;
-  background-color: #F7E9D7;
+}
 
+.glow{
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 5px #F8E2CF, 0 0 5px #F8E2CF, 0 0 10px #F8E2CF, 0 0 15px #F8E2CF, 0 0 20px #F8E2CF;
+  }
+
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 10px #FFC4E1, 0 0 10px #FFC4E1, 0 0 10px #FFC4E1, 0 0 10px #FFC4E1, 0 0 15px #FFC4E1, 0 0 20px #FFC4E1;
+  }
 }
 
 .middle-container {
   position: relative;
   display: block;
-background-color: #EFFFFD;
-
+  background-color: #EFFFFD;
   padding: 3rem 0 3rem 0;
 }
 
 .de {
   text-decoration: underline;
 }
-
+/**********
 .top-cloud {
   position: absolute;
   right: 300px;
@@ -84,6 +94,8 @@ background-color: #EFFFFD;
   left: 300px;
   bottom: 300px;
 }
+**********/
+
 .profile{
   width: 25%;
   margin: auto;
@@ -93,11 +105,12 @@ background-color: #EFFFFD;
   border-radius: 100%;
 }
 .myVideo {
-  position: relative;
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  z-index: -1;
 }
 
 
